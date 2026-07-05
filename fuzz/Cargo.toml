@@ -26,6 +26,13 @@ doc = false
 bench = false
 
 [[bin]]
+name = "evidence_fuzzer"
+path = "fuzz_targets/evidence_fuzzer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
 name = "replay_fuzzer"
 path = "fuzz_targets/replay_fuzzer.rs"
 test = false

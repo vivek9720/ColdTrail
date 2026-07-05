@@ -1,0 +1,27 @@
+[manifest]
+route_id=4660
+trailer_class=8
+product_class=vaccine
+temp_range=-20.0,-8.0
+station=CentralDock
+flags=0x20
+lane_profile=0x3004
+stop1=1,0x5001,35,37.7740,-122.4190
+stop2=2,0x5018,25,34.0520,-118.2440
+
+[logger_csv]
+timestamp,sensor_code,value_c,unit,quality
+2026-07-05T08:00:00Z,0x4100,-18.2,C,ok
+2026-07-05T08:15:00Z,0x4100,-18.0,C,ok
+2026-07-05T08:30:00Z,0x4100,-17.8,C,ok
+
+[edi214]
+ST*214*0001~
+B10*BOL7781*SHIP7781*CTRX~
+LX*1~
+AT7*X3***20260705*0800*UT~
+MS1*FRESNO*CA*US~
+LX*2~
+AT7*D1***20260705*1500*UT~
+MS1*LOS ANGELES*CA*US~
+SE*10*0001~

@@ -29,7 +29,7 @@ if [[ "${SANITIZER:-address}" == "address" ]] \
   export RUSTFLAGS="${RUSTFLAGS:-} -Zsanitizer=address -Cpanic=abort"
 fi
 
-targets=(stream_fuzzer replay_fuzzer script_fuzzer)
+targets=(stream_fuzzer evidence_fuzzer replay_fuzzer script_fuzzer)
 
 for target in "${targets[@]}"; do
   cargo rustc --manifest-path "$ROOT/fuzz/Cargo.toml" --locked --offline --release --bin "$target" -- \
