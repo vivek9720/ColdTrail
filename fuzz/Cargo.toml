@@ -1,0 +1,40 @@
+[package]
+name = "coldtrail-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+coldtrail = { path = ".." }
+libfuzzer-sys = { path = "libfuzzer-sys" }
+
+[workspace]
+
+[profile.release]
+debug = 1
+overflow-checks = true
+panic = "abort"
+
+[[bin]]
+name = "stream_fuzzer"
+path = "fuzz_targets/stream_fuzzer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "replay_fuzzer"
+path = "fuzz_targets/replay_fuzzer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "script_fuzzer"
+path = "fuzz_targets/script_fuzzer.rs"
+test = false
+doc = false
+bench = false

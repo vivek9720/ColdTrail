@@ -1,0 +1,25 @@
+[package]
+name = "coldtrail"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Cold-chain logistics telemetry and manifest protocol decoder"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["cold-chain", "telemetry", "parser", "fuzzing"]
+categories = ["parser-implementations", "network-programming"]
+
+[dependencies]
+
+[lib]
+name = "coldtrail"
+path = "src/lib.rs"
+
+[profile.dev]
+overflow-checks = true
+
+[profile.release]
+opt-level = 3
+debug = true
+overflow-checks = true
+panic = "abort"

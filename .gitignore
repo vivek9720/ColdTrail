@@ -1,0 +1,9 @@
+/target/
+/fuzz/target/
+/out/
+/.clusterfuzzlite/build/
+*.profraw
+*.profdata
+crash-*
+timeout-*
+oom-*
