@@ -10,6 +10,7 @@ pub mod analytics;
 pub mod catalog;
 pub mod checksum;
 pub mod codec;
+pub mod custody;
 pub mod csvlog;
 pub mod cursor;
 pub mod edi;

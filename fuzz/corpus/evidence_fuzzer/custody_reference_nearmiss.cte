@@ -1,0 +1,25 @@
+[manifest]
+route_id=9901
+trailer_class=9
+product_class=vaccine
+temp_range=-20.0,-12.0
+station=CentralDock
+flags=0x20
+lane_profile=0x3009
+stop1=1,0x5001,35,37.7740,-122.4190
+stop2=2,0x5018,25,34.0520,-118.2440
+
+[logger_csv]
+timestamp,sensor_code,value_c,unit,quality
+2026-07-05T08:00:00Z,0x4100,-18.2,C,ok
+2026-07-05T08:15:00Z,0x4100,-18.0,C,ok
+2026-07-05T08:30:00Z,0x4100,-17.8,C,ok
+
+[edi214]
+ST*214*0042~
+B10*BOL9901*SHIP9901*CTRX~
+MS2*CTRX*REEFER771~
+L11*REF-CT-9901-DELIVERY*BM~
+AT7*D1***20260705*1500*UT~
+MS1*LOS ANGELES*CA*US~
+SE*8*0042~

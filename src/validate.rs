@@ -1,4 +1,5 @@
 use crate::analytics;
+use crate::custody;
 use crate::evidence::EvidenceBundle;
 use crate::model::{DecodedEvent, Manifest, SensorSample};
 
@@ -66,6 +67,7 @@ pub fn validate_evidence(bundle: &EvidenceBundle) -> ValidationReport {
     }
     validate_edi(&mut report, bundle);
     validate_binary_capture(&mut report, bundle);
+    report.findings.extend(custody::assess_custody(bundle));
     report
 }
 
